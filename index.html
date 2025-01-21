@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <ul>
+        <li class='view-art'><a href='https://www.digitalaccessoriesandsupplies.com/p/pl.html'>My Cart</a></li>
+        <li class='my-cart'> 
+            <a class='cart-details'>
+                <i class='fa fa-shopping-cart'/>
+                <span class='simpleCart_quantity'>0</span>
+            </a>
+            <div class='cart-description'>
+                <div class='simpleCart_items'></div>
+                <div class='cart-buttons-wrap'>
+                    <div class='cart-amount'>
+                        <span class='cart-subtotal'>SUBTOTAL :</span><span class='simpleCart_total'></span>
+                    </div>
+                    <div class='cart-buttons'>
+                        <!-- Empty Cart Button -->
+                        <a class='simpleCart_empty' href='javascript:;'>
+                            <span>Empty cart</span>
+                        </a>
+                        <!-- PayPal Button -->
+                        <a class='simpleCart_checkout' href='https://www.digitalaccessoriesandsupplies.com/p/pl.html'>
+                            <span><i class='fa fa-credit-card'/>PayPal Pay</span>
+                        </a>
+                        <!-- Bank Transfer/Card Payment Button -->
+                        <a class='bank-transfer-button' href='https://www.digitalaccessoriesandsupplies.com/p/new-cart-payment.html'>
+                            <span><i class='fa fa-credit-card'/> Bank Transfer/Card Payment</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <!-- Custom Payment Form (hidden initially) -->
+    <div class='custom-payment-form' id='customPaymentForm' style='display: none;'>
+        <button class='close-form' id='closeCustomButton'>&#215;</button>
+        <h3></h3>
+        <form id='customPaymentFormDetails'>
+            <!-- Customer Payment Information -->
+            <div class='payment-section'>
+                <h4></h4>
+                <label for='paymentMethod'>Choose Payment Method:</label>
+                <select id='paymentMethod' name='paymentMethod'>
+                    <option value='creditCard'>Credit/Debit Card</option>
+                    <option value='bankTransfer'>Bank Transfer</option>
+                </select><br/>
+
+                <!-- Credit/Debit Card Section -->
+                <div id='creditCardFields'>
+                    <label for='cardNumber'>Card Number:</label>
+                    <input id='cardNumber' name='cardNumber' placeholder='Card Number' type='text'/><br/>
+                    <label for='expiryDate'>Expiration Date:</label>
+                    <input id='expiryDate' name='expiryDate' placeholder='MM/YY' type='text'/><br/>
+                    <label for='cvv'>CVV:</label>
+                    <input id='cvv' name='cvv' placeholder='CVV' type='text'/><br/>
+                </div>
+
+                <!-- Bank Transfer Section -->
+                <div id='bankTransferFields'>
+                    <label for='bankName'>Bank Name:</label>
+                    <input id='bankName' name='bankName' type='text'/><br/>
+                    <label for='accountNumber'>Account Number:</label>
+                    <input id='accountNumber' name='accountNumber' type='text'/><br/>
+                </div>
+            </div>
+
+            <button class='pay-now-button' type='submit'>Pay Now</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

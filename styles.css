@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.cart-buttons a, .bank-transfer-button {
+    background-color: #8a2be2; /* Purple */
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-buttons a:hover, .bank-transfer-button:hover {
+    background-color: #28a745; /* Green */
+}
+
+.bank-transfer-button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-transfer-button i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.custom-payment-form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-form {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
